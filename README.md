@@ -100,14 +100,14 @@ services:
      image: mongo:latest
  
   backend:
-    image: clodonil/app-back:latest
+    image: t3santos/app-back:latest
     depends_on:
       - mongodb
     links:
       - mongodb
 
   frontend:
-    image: clodonil/app-front:latest
+    image: t3santos/app-front:latest
     ports:
       - 8080:8080
     depends_on:
