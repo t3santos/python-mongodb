@@ -21,7 +21,7 @@ def coleta():
    # Conexao a tabela de banco de dados
    table = banco['deputados']
 
-   tablegasto = banco['gastos']
+   #tablegasto = banco['gastos']
 
    # Array que vai receber os dados do deputados
    list_deputados = []
@@ -41,11 +41,11 @@ def coleta():
        }
        list_deputados.append(info)
 
-   list_gastos = []
+#   list_gastos = []
 
-   for dep in list_dep:
-       gasto = obj.deputado_despesas(dep['id'])
-       list_gastos.append(gasto)
+ #  for dep in list_dep:
+  #     gasto = obj.deputado_despesas(dep['id'])
+   #    list_gastos.append(gasto)
 
    # Inserindo dados no mongodb
    retorno = table.insert_many(list_deputados)
